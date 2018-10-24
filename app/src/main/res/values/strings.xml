@@ -1,0 +1,59 @@
+<resources>
+    <!-- Title for the application.[CHAR LIMIT=12] -->
+    <string name="app_name">TourGuide</string>
+
+    <item name="text_container" type="id"/>
+
+    <!--Dinning Fragment -->
+    <string name="category_dinning">Dinning</string>
+    <string name="food1">Reading Terminal</string>
+    <string name="food_address1">51 N. 12th Street, Philadelphia, PA</string>
+    <string name="food2">Warmdaddy\'s</string>
+    <string name="food_address2">1400 S. Columbus Blvd, Philadelphia, PA</string>
+    <string name="food3">Jim\'s Steaks</string>
+    <string name="food_address3">(Various locations) 400 South Street, Philadelphia, PA</string>
+    <string name="food4">Sonny\'s Famous Steaks</string>
+    <string name="food_address4">228 Market Street, Philadelphia, PA</string>
+    <string name="food5">Ishkabibble\'s</string>
+    <string name="food_address5">517 South Street, Philadelphia, PA</string>
+
+    <!--Traveling Fragment -->
+    <string name="category_traveling">Traveling</string>
+    <string name="travel1">Amtrak 30th Street Station</string>
+    <string name="travel_address1">2955 Market St, Philadelphia, PA</string>
+    <string name="travel2">MegaBus</string>
+    <string name="travel_address2">3048 John F Kennedy Blvd, Philadelphia, PA</string>
+    <string name="travel3">Riverlink Ferry</string>
+    <string name="travel_address3">Columbus Blvd and Walnut Street, Philadelphia, PA</string>
+    <string name="travel4">Big Bus Tours</string>
+    <string name="travel_address4">5th and Market St, NE Corner, Philadelphia, PA</string>
+    <string name="travel5">PATCO (New Jersey Transit)</string>
+    <string name="travel_address5">Located at 30th Street Station, Philadelphia, PA</string>
+
+    <!--Sites Fragment -->
+    <string name="category_sites">Sites</string>
+    <string name="sites1">Philadelphia Art Museum</string>
+    <string name="sites_address1">2600 Benjamin Franklin Parkway, Philadelphia, PA</string>
+    <string name="sites2">Liberty Bell</string>
+    <string name="sites_address2">N. 6th St and Market St, Philadelphia, PA</string>
+    <string name="sites3">The African American Museum in Philadelphia</string>
+    <string name="sites_address3">701 Arch St, Philadelphia, PA</string>
+    <string name="sites4">Independence Seaport Museum</string>
+    <string name="sites_address4">211 S. Columbus Blvd. Philadelphia,PA </string>
+    <string name="sites5">Eastern State Penitentiary</string>
+    <string name="sites_address5">2027 Fairmount Avenue, Philadelphia, PA</string>
+
+    <!--Events -->
+    <string name="category_events">Events</string>
+    <string name="event1">Pennhurst Asylum</string>
+    <string name="events_address1">250 Common Wealth Drive, Spring City, PA</string>
+    <string name="event2">Dilworth Park Wintergarden</string>
+    <string name="events_address2">1 S. 15th Street, Philadelphia, PA</string>
+    <string name="event3">Blue Cross RiverRink Winterfest</string>
+    <string name="events_address3">101 S. Columbus Blvd. Philadelphia, PA</string>
+    <string name="event4">Chrysanthemum Festival at Longwood Gardens</string>
+    <string name="events_address4">1001 Longwood Rd, Kennett Square, PA</string>
+    <string name="event5">Thanksgiving Day Parade</string>
+    <string name="events_address5">Benjamin Franklin Parkway, Philadelphia, PA</string>
+    <string name="philly_city_hall">philly city hall</string>
+</resources>

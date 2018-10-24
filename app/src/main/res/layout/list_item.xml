@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="@dimen/default_list_item"
+                android:layout_height="@dimen/default_list_item" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/defaut_layout_height"
+                android:text=""
+                android:paddingTop="16dp"
+                style="@style/locationTitle"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text=""
+                style="@style/locationDescription"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text=" "
+                android:autoLink="map"
+                android:drawableLeft="@drawable/ic_add_location"
+                style="@style/locationAddressHoursPricePhone"/>
+
+            <TextView
+                android:id="@+id/hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text=""
+                android:drawableLeft="@drawable/ic_schedule"
+                style="@style/locationAddressHoursPricePhone"/>
+
+            <TextView
+                android:id="@+id/priceRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text=""
+                android:drawableLeft="@drawable/ic_attach_money"
+                style="@style/locationAddressHoursPricePhone"/>
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_list_item"
+                android:paddingTop="16dp"
+                android:text=""
+                android:autoLink="phone"
+                android:drawableLeft="@drawable/ic_local_phone"
+                style="@style/locationAddressHoursPricePhone"/>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Category Text Color -->
+    <color name="category_food">#FF91364B</color>
+    <color name="category_traveling">#FF839193</color>
+    <color name="category_events">#FF8E667D</color>
+    <color name="category_sites">#FFBDA77C</color>
+</resources>
