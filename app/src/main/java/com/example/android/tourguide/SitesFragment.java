@@ -12,6 +12,10 @@ import com.example.android.tourguide.adapter.LocationAdapter;
 
 import java.util.ArrayList;
 
+/**
+ * {@link Fragment}
+ */
+
 public class SitesFragment extends Fragment {
 
     public SitesFragment() {

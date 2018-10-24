@@ -3,6 +3,10 @@ package com.example.android.tourguide;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+/**
+ * {@link Location}
+ */
+
 public class Location {
 
     private String name;
