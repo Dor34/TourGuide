@@ -1,4 +1,4 @@
-package com.example.android.tourguide.activity;
+package com.example.android.tourguide;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
