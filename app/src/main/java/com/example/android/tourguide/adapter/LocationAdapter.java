@@ -1,6 +1,7 @@
 package com.example.android.tourguide.adapter;
 
 import android.app.Activity;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,78 +14,64 @@ import com.example.android.tourguide.R;
 
 import java.util.ArrayList;
 
+/**
+ * {@link LocationAdapter} {@link ArrayAdapter} {@link Location}
+ */
+
 public class LocationAdapter extends ArrayAdapter<Location> {
 
-    private final int mColorResourceId;
-
-    public LocationAdapter(Activity context, ArrayList<Location> location, int colorResourceId){
+    public LocationAdapter(Activity context, ArrayList<Location> location, int category_food){
         super(context, 0, location);
-        mColorResourceId = colorResourceId;
     }
 
+    private static class ViewHolder{
+        private TextView nameTextView;
+        private TextView descriptionTextView;
+        private TextView addressTextView;
+        private TextView hoursTextView;
+        private TextView priceRangeTextView;
+        private TextView phoneNumberTextView;
+        private ImageView imageView;
+    }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
-        final Location currentLocation = getItem (position);
-        View listItemView = convertView;
+    public View getView(int position, View convertView, @NonNull ViewGroup parent){
+        //Get {@link location}
+        Location currentLocation = getItem (position);
+        ViewHolder holder;
 
-        if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate
-                    (R.layout.list_item, parent, false);
+        if(convertView != null){
+            holder = (ViewHolder) convertView.getTag ();
+        }else{
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+            holder = new ViewHolder ();
+
+            holder.nameTextView = (TextView) convertView.findViewById (R.id.name);
+            holder.descriptionTextView = (TextView) convertView.findViewById (R.id.description);
+            holder.addressTextView = (TextView) convertView.findViewById (R.id.address);
+            holder.hoursTextView = (TextView) convertView.findViewById (R.id.hours);
+            holder.priceRangeTextView = (TextView) convertView.findViewById (R.id.priceRange);
+            holder.phoneNumberTextView = (TextView) convertView.findViewById (R.id.phoneNumber);
+            holder.imageView = (ImageView) convertView.findViewById (R.id.image_view);
+            convertView.setTag (holder);
         }
 
-        TextView nameLocationTextView = (TextView) listItemView.findViewById(R.id.name);
-        nameLocationTextView.setText(currentLocation.getName());
+        assert currentLocation != null;
+        holder.nameTextView.setText(currentLocation.getName());
 
-        TextView descriptionLocationTextView = (TextView)
-                listItemView.findViewById(R.id.description);
-        descriptionLocationTextView.setText(currentLocation.getDescription());
+        holder.descriptionTextView.setText(currentLocation.getDescription());
 
-        TextView addressLocationTextView = (TextView) listItemView.findViewById(R.id.address);
-        addressLocationTextView.setText(currentLocation.getAddress());
+        holder.addressTextView.setText(currentLocation.getAddress());
 
-        TextView scheduleLocationTextView = (TextView) listItemView.findViewById(R.id.hours);
-        scheduleLocationTextView.setText(currentLocation.getHours());
+        holder.hoursTextView.setText(currentLocation.getHours());
 
-        TextView priceLocationTextView = (TextView) listItemView.findViewById(R.id.priceRange);
-        priceLocationTextView.setText(currentLocation.getPriceRange());
+        holder.priceRangeTextView.setText(currentLocation.getPriceRange());
 
-        TextView phoneLocationTextView = (TextView) listItemView.findViewById(R.id.phoneNumber);
-        phoneLocationTextView.setText(currentLocation.getPhoneNumber());
+        holder.phoneNumberTextView.setText(currentLocation.getPhoneNumber());
 
-        ImageView photoLocationImageView = (ImageView) listItemView.findViewById(R.id.image_view);
+        holder.imageView.setImageResource (currentLocation.getImageResourceId ());
 
-        if (currentLocation.hasImage_View()){
-            photoLocationImageView.setImageResource(currentLocation.getImageResourceId());
-            photoLocationImageView.setVisibility(View.VISIBLE);
-        } else {
-            photoLocationImageView.setVisibility(View.GONE);
-        }
-
-        if (currentLocation.hasPriceRange()){
-            priceLocationTextView.setVisibility(View.VISIBLE);
-        } else {
-            priceLocationTextView.setVisibility(View.GONE);
-        }
-
-        if (currentLocation.hasHours()){
-            scheduleLocationTextView.setVisibility(View.VISIBLE);
-        } else {
-            scheduleLocationTextView.setVisibility(View.GONE);
-        }
-
-        if (currentLocation.hasAddress()){
-            addressLocationTextView.setVisibility(View.VISIBLE);
-        } else {
-            addressLocationTextView.setVisibility(View.GONE);
-        }
-
-        if (currentLocation.hasPhoneNumber()){
-            phoneLocationTextView.setVisibility(View.VISIBLE);
-        } else {
-            phoneLocationTextView.setVisibility(View.GONE);
-        }
-
-        return listItemView;
+        return convertView;
     }
 }

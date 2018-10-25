@@ -17,4 +17,6 @@
     <style name="locationDescription">Description</style>
 
     <style name="locationAddressHoursPricePhone">Address_Hours_Price_Phone</style>
+
+    <style name="CardViewText">card_view_text</style>
 </resources>

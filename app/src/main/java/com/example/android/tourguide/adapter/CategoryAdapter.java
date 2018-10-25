@@ -7,21 +7,37 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.android.tourguide.DinningFragment;
 import com.example.android.tourguide.EventsFragment;
+import com.example.android.tourguide.Location;
 import com.example.android.tourguide.R;
 import com.example.android.tourguide.SitesFragment;
 import com.example.android.tourguide.TravelingFragment;
 
+/**
+ * {@link CategoryAdapter} {@link FragmentPagerAdapter}
+ * {@link Location}
+ */
 
 public class CategoryAdapter extends FragmentPagerAdapter {
 
     private Context context;
     private static final int PAGE_COUNT = 4;
 
+    /**
+     * {@link CategoryAdapter}
+     * @param context
+     * @param fm (fragment manager)
+     */
+
 
     public CategoryAdapter(Context context, FragmentManager fm) {
         super(fm);
         this.context = context;
     }
+
+    /**
+     * {@link Fragment}
+     *
+     */
 
     @Override
     public Fragment getItem(int position){
