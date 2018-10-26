@@ -16,25 +16,38 @@ public class Location {
     private String hours;
     private String priceRange;
     private static final int NO_IMAGE_PROVIDED = -1;
-    private static int imageResourceId;
+    private int imageResourceId;
 
     /**
-     * Create listed items
-     * @param name name of place
-     * @param description of said place
+     * @param name place
+     * @param description details about place
+     * @param imageResourceId drawable resource for image
+     * @param address location of place
+     * @param phoneNumber contact
+     * @param hours open and close
+     * @param priceRange cost
      */
 
-    public Location(String name, String description) {
+
+    public Location(String name, String description,String address, String hours,
+                    String phoneNumber, String priceRange, int imageResourceId) {
+
         this.name = name;
         this.description = description;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.hours = hours;
         this.priceRange = priceRange;
-        Location.imageResourceId = imageResourceId;
+        this.imageResourceId = imageResourceId;
     }
 
     public Location(String string, String string1, int pennhurst_asylum) {
+
+        name = name;
+
+    }
+
+    public Location(String string, String string1) {
     }
 
     public String getName() {
@@ -65,24 +78,24 @@ public class Location {
         return imageResourceId;
     }
 
-    public boolean hasImage_View(){
+    public boolean image(){
         Log.v("hasImage", "word has image: "+ (imageResourceId != NO_IMAGE_PROVIDED));
         return imageResourceId != NO_IMAGE_PROVIDED;
     }
 
-    public boolean hasPriceRange(){
+    public boolean priceRange(){
         return getPriceRange() != null;
     }
 
-    public boolean hasPhoneNumber(){
+    public boolean phoneNumber(){
         return getPhoneNumber() != null;
     }
 
-    public boolean hasAddress(){
+    public boolean address(){
         return getAddress() != null;
     }
 
-    public boolean hasHours(){
+    public boolean hours(){
         return getHours() != null;
     }
 
@@ -90,12 +103,13 @@ public class Location {
     @Override
     public String toString() {
 
-        return getName() + "\n" +
+        return  getName() + "\n" +
                 getDescription() + "\n" +
                 getAddress() + "\n" +
                 getPhoneNumber() + "\n" +
                 getPriceRange() + "\n" +
                 getHours() + "\n" +
                 getImageResourceId();
+
     }
 }

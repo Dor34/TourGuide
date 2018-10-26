@@ -4,7 +4,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="default_list_item">88dp</dimen>
     <dimen name="defaut_layout_height">88dp</dimen>
-    <dimen name="image_card_view_height">125dp</dimen>
+    <dimen name="image_card_view_height">150dp</dimen>
     <dimen name="bottom_margin_card_view">8dp</dimen>
     <dimen name="margin_start_card_view">16dp</dimen>
     <dimen name="card_view_margin">10dp</dimen>

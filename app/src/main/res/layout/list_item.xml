@@ -8,15 +8,15 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_view_margin"
         card_view:cardCornerRadius="@dimen/corner_radius"
-        card_view:cardElevation="@dimen/card_elevation"
-        android:layout_margin="@dimen/card_view_margin">
+        card_view:cardElevation="@dimen/card_elevation">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="349dp"
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/image_view"
@@ -29,87 +29,87 @@
 
             <TextView
                 android:id="@+id/name"
+                style="@style/CardViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:layout_below="@id/image_view"
                 android:layout_marginStart="@dimen/margin_start_card_view"
                 android:layout_marginLeft="@dimen/bottom_margin_card_view"
                 android:layout_marginTop="@dimen/margin_start_card_view"
-                android:layout_below="@id/image_view"
-                style="@style/CardViewText"/>
+                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:text="Name"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/description"
+                style="@style/CardViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="desription"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:layout_below="@id/name"
                 android:layout_marginStart="@dimen/margin_start_card_view"
                 android:layout_marginLeft="@dimen/bottom_margin_card_view"
                 android:layout_marginTop="@dimen/margin_start_card_view"
-                android:layout_below="@id/name"
-                style="@style/CardViewText"/>
+                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:text="desription"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/address"
+                style="@style/CardViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:textAppearance="?android:textAppearanceMedium"
-                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:layout_below="@id/description"
                 android:layout_marginStart="@dimen/margin_start_card_view"
                 android:layout_marginLeft="@dimen/bottom_margin_card_view"
                 android:layout_marginTop="@dimen/margin_start_card_view"
-                android:layout_below="@id/description"
-                style="@style/CardViewText"
+                android:layout_marginBottom="@dimen/bottom_margin_card_view"
                 android:autoLink="map"
-                android:drawableLeft="@drawable/ic_add_location" />
+                android:drawableLeft="@drawable/ic_add_location"
+                android:text=""
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/hours"
+                style="@style/CardViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hours"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:layout_below="@id/address"
                 android:layout_marginStart="@dimen/margin_start_card_view"
                 android:layout_marginLeft="@dimen/bottom_margin_card_view"
                 android:layout_marginTop="@dimen/margin_start_card_view"
-                android:layout_below="@id/address"
-                style="@style/CardViewText"
-                android:drawableLeft="@drawable/ic_schedule"/>
+                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:drawableLeft="@drawable/ic_schedule"
+                android:text="Hours"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/priceRange"
+                style="@style/CardViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price Range"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:layout_below="@id/hours"
                 android:layout_marginStart="@dimen/margin_start_card_view"
                 android:layout_marginLeft="@dimen/bottom_margin_card_view"
                 android:layout_marginTop="@dimen/margin_start_card_view"
-                android:layout_below="@id/hours"
-                style="@style/CardViewText"
-                android:drawableLeft="@drawable/ic_attach_money"/>
+                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:drawableLeft="@drawable/ic_attach_money"
+                android:text="Price Range"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/phoneNumber"
+                style="@style/CardViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone Number"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:layout_marginBottom="@dimen/bottom_margin_card_view"
+                android:layout_below="@id/priceRange"
                 android:layout_marginStart="@dimen/margin_start_card_view"
                 android:layout_marginLeft="@dimen/bottom_margin_card_view"
                 android:layout_marginTop="@dimen/margin_start_card_view"
-                android:layout_below="@id/priceRange"
-                style="@style/CardViewText"
+                android:layout_marginBottom="@dimen/bottom_margin_card_view"
                 android:autoLink="phone"
-                android:drawableLeft="@drawable/ic_local_phone"/>
+                android:drawableLeft="@drawable/ic_local_phone"
+                android:text="Phone Number"
+                android:textAppearance="?android:textAppearanceMedium" />
 
         </RelativeLayout>
 
